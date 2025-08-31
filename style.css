@@ -1,0 +1,552 @@
+:root {
+            --primary-color: #1a4f8e;
+            --secondary-color: #2c6aa0;
+            --accent-color: #3a8ccc;
+            --light-color: #e6f0f7;
+            --dark-color: #0a2d52;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: rgba(17, 147, 212, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 12px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        .navbar-brand span {
+            color: var(--primary-color);
+        }
+        
+        section {
+            padding: 40px 0;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/interior.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0 60px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--dark-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            margin: 10px auto;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-color) 0%, #fff 100%);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            height: 100%;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .icon-box {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .amenity-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .amenity-icon {
+            color: var(--primary-color);
+            margin-right: 8px;
+            font-size: 1rem;
+        }
+        
+        .location-section {
+            background-color: var(--light-color);
+        }
+        
+        .floorplan-section {
+            background-color: var(--light-color);
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, var(--light-color) 0%, #e6f0f7 100%);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .pricing-table th {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+        
+        .pricing-table tr:hover {
+            background-color: #f0f8ff;
+        }
+        
+        .contact-section {
+            background-color: var(--light-color);
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border: none;
+            padding: 8px 20px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 25px 0 10px;
+        }
+        
+        .footer a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+        }
+        
+        .coming-soon-modal .modal-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            border-bottom: none;
+        }
+        
+        .coming-soon-modal .btn-close {
+            color: white;
+            filter: invert(1);
+        }
+        
+        #map {
+            height: 300px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #e6f0f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 15px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        .lead {
+            color: white;
+            font-weight: 500;
+        }
+          .LEAD {
+            color: blue;
+            font-weight: 500;
+        }
+        
+        /* Amenities Slider */
+        .amenities-slider {
+            padding: 15px 0;
+        }
+        
+        .amenity-slide {
+            padding: 8px;
+        }
+        
+        .amenity-card {
+            height: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .amenity-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .amenity-img {
+            height: 160px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .amenity-name {
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--dark-color);
+            background-color: white;
+            font-size: 0.95rem;
+        }
+        
+        /* Simple Map */
+        .simple-map {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .simple-map i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+        
+        /* Floor Plan Styles */
+        .floorplan-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .floorplan-btn {
+            background: white;
+            border: 2px solid var(--primary-color);
+            padding: 8px 15px;
+            margin: 4px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .floorplan-btn:hover, .floorplan-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .floorplan-content {
+            display: none;
+        }
+        .floorplan-img {
+    max-width: 80%;   /* Image chhoti ho jaayegi */
+    height: auto;
+    display: block;
+    margin: 0 auto;   /* center me aayegi */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .zoom-container {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+  }
+  .zoom-info {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+  }
+        .floorplan-content.active {
+            display: block;
+        }
+        
+        .floorplan-img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        
+        .floorplan-img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .floorplan-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .floorplan-details {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .floorplan-specs {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .floorplan-specs li {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+        
+        .floorplan-specs li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Slider arrows */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .slider-arrow:hover {
+            opacity: 1;
+        }
+        
+        .slider-arrow-left {
+            left: -15px;
+        }
+        
+        .slider-arrow-right {
+            right: -15px;
+        }
+        
+        /* Slider container */
+        .slider-container {
+            position: relative;
+            padding: 0 30px;
+        }
+        
+        /* Floor plan zoom functionality */
+        .zoom-container {
+            position: relative;
+            overflow: hidden;
+            cursor: zoom-in;
+        }
+        
+        .zoom-container.zoomed {
+            cursor: zoom-out;
+        }
+        
+        .zoom-info {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            #map {
+                height: 250px;
+            }
+            
+            .floorplan-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .floorplan-btn {
+                width: 180px;
+                text-align: center;
+            }
+            
+            .amenity-img {
+                height: 140px;
+            }
+            
+            .slider-arrow {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .slider-arrow-left {
+                left: -10px;
+            }
+            
+            .slider-arrow-right {
+                right: -10px;
+            }
+            
+            .slider-container {
+                padding: 0 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 30px 0;
+            }
+            
+            .hero-section {
+                padding: 80px 0 40px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .amenity-img {
+                height: 120px;
+            }
+        }
+          .contact-form {
+    max-width: 650px; /* pehle 500px tha, ab bada kar diya */
+    margin: 0 auto;
+  }
